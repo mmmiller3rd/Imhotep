@@ -2,13 +2,9 @@
     <head>
         <style>
             body {
-                /* z-index: 1; */
                 margin: 0;
-                /* width: 58%; */
-                /* width: 100%; */
-                /* height: 100%; */
                 background-color: rgb(100, 175, 235);
-                /* opacity: 80%; */
+                overflow: hidden;
                 #background {
                     position: absolute;
                     top: 0;
@@ -16,14 +12,6 @@
                     width: 100%;
                     height: 100%;
                     z-index: -2;
-                }
-                #title {
-                    width: fit-content;
-                    font-size: 5em;
-                    font-weight: bolder;
-                    font-family: 'papyrus', fantasy;
-                    margin: 0 auto;
-                    height: 130px;
                 }
                 #name {
                     width: fit-content;
@@ -34,50 +22,93 @@
                     height: 80px;
                     color: coral;
                 }
-                #header {
-                    width: fit-content;
-                    font-size: 2em;
-                    font-family: 'papyrus', fantasy;
-                    margin: 0 auto;
-                    margin-top: 15px;
-                    font-weight: bold;
-                    padding: 5px;
-                    border-left: 2px solid black;
-                    border-right: 2px solid black;
-                    border-bottom: 2px solid black;
-                    border-radius: 5px;
+                
+                #body-left::-webkit-scrollbar, #body-right::-webkit-scrollbar {
+                    display: none; /* Hides the scrollbar */
                 }
                 .section {
-                    width: 30%;
-                    overflow: hidden;
-                    height: 35%;
-                    background-color: rgba(100, 132, 235, 0.7);
-                    position: absolute;
-                    margin: 2% 10%;
-                    color: rgb(255, 255, 255);
-                    /* background-image: url(border.png); */
+                    width: 100%;
+                    /* min-height: 35%; */
+                    /* background-color: rgba(100, 132, 235, 0.7); */
+                    background-color: rgba(255, 255, 255, .6);
+                    padding-top: 10px;
+                    padding-bottom: 30px;
+                    color: rgb(100, 132, 235);
                     border-radius: 10px;
+                    margin-top: 15px;
+                    #header {
+                        width: fit-content;
+                        font-size: 2em;
+                        font-family: 'papyrus', fantasy;
+                        margin: 0 auto;
+                        margin-bottom: 15px;
+                        font-weight: bold;
+                        padding: 5px;
+                        background-color: rgba(0, 0, 0, .7);
+                        border-right: 3px solid rgb(100, 132, 235);
+                        border-bottom: 3px solid rgb(100, 132, 235);
+                        border-radius: 5px;
+                    }
+                    .info {
+                        color: black;
+                        margin-left: 10px;
+                    }
+                    .info-header{
+                        font-weight: bold;
+                        font-size: xx-large;
+                        border-bottom: 2px solid black;
+                        width: fit-content;
+                    }
+                    .info-body {
+                        font-size: large;
+                        margin-left: 20px;
+                    }
                 }
-                #studentSpotlight {
+                #body-left {
+                    position: absolute;
+                    overflow-y: scroll;
                     top: 0;
                     left: 0;
+                    width: 35%;
+                    height: 100%;
+                    margin: 2% 7.5%; 
+                    overflow: scroll; /* Ensures content can still scroll */
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                    /* #studentSpotlight {
+                        top: 0;
+                        left: 0;
+                    }
+                    #reminders {
+                        top: 0;
+                        right: 0;
+                    }
+                    #recap {
+                        bottom: 15%;
+                        left: 0;
+                    }
+                    #upcoming {
+                        bottom: 15%;
+                        right: 0;
+                    }
+                    #tips {
+                        bottom: 0;
+                        right: 0;
+                        margin: 2% 30%;
+                    } */
+                    
                 }
-                #reminders {
+                #body-right {
+                    position: absolute;
+                    overflow-y: scroll;
                     top: 0;
                     right: 0;
-                }
-                #recap {
-                    bottom: 15%;
-                    left: 0;
-                }
-                #upcoming {
-                    bottom: 15%;
-                    right: 0;
-                }
-                #tips {
-                    bottom: 0;
-                    right: 0;
-                    margin: 2% 30%;
+                    width: 35%;
+                    height: 100%;
+                    margin: 2% 7.5%; 
+                    overflow: scroll; /* Ensures content can still scroll */
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
                 }
             }
         </style>
@@ -86,20 +117,45 @@
     <Body>
         <img id="background" src="Firefly_technology spelled out in neon lights 671743.jpg"/>
         <div id="name">Mr. Miller</div>
-        <div id="studentSpotlight" class="section">
-            <div id="header">Student Spotlight</div>
+        <div id="body-left">
+            <div id="studentSpotlight" class="section">
+                <div id="header">Student Spotlight</div>
+                <div class="info info-header">5th - 8th</div>
+                
+                <div class="info info-body" style="display: flex;">
+                    <img src="Imani.jpg" alt="Imani" style="width: 150px; height: 100px;"/>
+                    Imani Moore - for a killer presentation during karaoke. Your presentation kept the class engaged and set the bar for all other presentations.</div>
+                <div class="info info-header">3rd - 4th</div>
+                <div class="info info-body">Langston Johnson - for putting together a power point presentation that made it easy for the presenter to use their imagination and create an engaging story.</div>
+                <div class="info info-header">1st - 2nd</div>
+                <div class="info info-body">Mahi Negrin - through her tenacity has shown the most improvement with typing on ABCya</div>
+                <div></div>
+            </div>
+            <div id="recap" class="section">
+                <div id="header">Recap</div>
+                <div class="info info-header">September</div>
+                <div class="info info-body">- learned how to login to office.com</div>
+                <div class="info info-body">- learned how to navigate between the online office products</div>
+                <div class="info info-body">- learned how to use Microsoft Word Online (Meet Me)</div>
+                <div class="info info-body">- learned how to use Microsoft PowerPoint Online (Karaoke)</div>
+                <div class="info info-body">- learned how to use Microsoft Excel Online (Candy Spreadsheet)</div>
+            </div>
+            <div id="tips" class="section">
+                <div id="header">Tips & Tricks</div>
+            </div>
         </div>
-        <div id="reminders" class="section">
-            <div id="header"> Reminders</div>
-        </div>
-        <div id="recap" class="section">
-            <div id="header">Recap</div>
-        </div>
-        <div id="upcoming" class="section">
-            <div id="header">What's Next</div>
-        </div>
-        <div id="tips" class="section">
-            <div id="header">Tips & Tricks</div>
+        <div id="body-right">
+            <div id="reminders" class="section">
+                <div id="header">Reminders</div>
+                <div class="info info-body">- All notes can be found on Teams</div>
+                <div class="info info-body">- All assignments can be found on Teams</div>
+                <div class="info info-body">- <b>5th through 8th</b> it is mandatory for you to have a working Laptop and charger</div>
+            </div>
+            <div id="upcoming" class="section">
+                <div id="header">What's Next</div>
+                <div class="info info-body">- Bill Book in Excel</div>
+                <div class="info info-body">- Intro to Scratch, Making our first game</div>
+            </div>
         </div>
     </Body>
 </html>
