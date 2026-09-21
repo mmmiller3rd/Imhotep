@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                background-color: rgb(100, 175, 235);
+                overflow: hidden;
+                #background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -2;
+                }
+                #name {
+                    width: fit-content;
+                    font-size: 3em;
+                    font-family: 'papyrus', fantasy;
+                    margin: 12.5% auto;
+                    font-weight: bold;
+                    height: 80px;
+                    color: coral;
+                }
+                
+                #body-left::-webkit-scrollbar, #body-right::-webkit-scrollbar {
+                    display: none; /* Hides the scrollbar */
+                }
+                .section {
+                    width: 100%;
+                    /* min-height: 35%; */
+                    /* background-color: rgba(100, 132, 235, 0.7); */
+                    background-color: rgba(255, 255, 255, .6);
+                    padding-top: 10px;
+                    padding-bottom: 30px;
+                    color: rgb(100, 132, 235);
+                    border-radius: 10px;
+                    margin-top: 15px;
+                    #header {
+                        width: fit-content;
+                        font-size: 2em;
+                        font-family: 'papyrus', fantasy;
+                        margin: 0 auto;
+                        margin-bottom: 15px;
+                        font-weight: bold;
+                        padding: 5px;
+                        background-color: rgba(0, 0, 0, .7);
+                        border-right: 3px solid rgb(100, 132, 235);
+                        border-bottom: 3px solid rgb(100, 132, 235);
+                        border-radius: 5px;
+                    }
+                    .info {
+                        color: black;
+                        margin-left: 10px;
+                    }
+                    .info-header{
+                        font-weight: bold;
+                        font-size: xx-large;
+                        border-bottom: 2px solid black;
+                        width: fit-content;
+                    }
+                    .info-body {
+                        font-size: large;
+                        margin-left: 20px;
+                    }
+                }
+                #body-left {
+                    position: absolute;
+                    overflow-y: scroll;
+                    top: 0;
+                    left: 0;
+                    width: 35%;
+                    height: 100%;
+                    margin: 2% 7.5%; 
+                    overflow: scroll; /* Ensures content can still scroll */
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                    /* #studentSpotlight {
+                        top: 0;
+                        left: 0;
+                    }
+                    #reminders {
+                        top: 0;
+                        right: 0;
+                    }
+                    #recap {
+                        bottom: 15%;
+                        left: 0;
+                    }
+                    #upcoming {
+                        bottom: 15%;
+                        right: 0;
+                    }
+                    #tips {
+                        bottom: 0;
+                        right: 0;
+                        margin: 2% 30%;
+                    } */
+                    
+                }
+                #body-right {
+                    position: absolute;
+                    overflow-y: scroll;
+                    top: 0;
+                    right: 0;
+                    width: 35%;
+                    height: 100%;
+                    margin: 2% 7.5%; 
+                    overflow: scroll; /* Ensures content can still scroll */
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                }
+            }
+        </style>
+        <title></title>
+    </head>
+    <Body>
+        <img id="background" src="Firefly_technology spelled out in neon lights 671743.jpg"/>
+        <div id="name">Mr. Miller</div>
+        <div id="body-left">
+            <!--<div id="studentSpotlight" class="section">
+                <div id="header">Student Spotlight</div>
+                <div class="info info-header">5th - 8th</div>
+                
+                <div class="info info-body" style="display: flex;">
+                    <img src="Imani.jpg" alt="Imani" style="width: 150px; height: 100px;"/>
+                    </div>
+                <div class="info info-header">3rd - 5th</div>
+                <div class="info info-body"></div>
+                <div class="info info-header">2nd</div>
+                <div class="info info-body"></div>
+                <div></div>
+            </div>-->
+            <div id="recap" class="section">
+                <div id="header">Recap</div>
+                <div class="info info-header">September 14th - 18th</div>
+                <div class="info info-body">- Attempted to learn Binary conversion, but a gap in the Math required was observed</div>
+                <div class="info info-body">- learned how to use tables in Microsoft Word Online (Math Basics)</div>
+                <div class="info info-body">- Focussed on the basics of Math, ie. place values, number to word conversion and division</div>
+                <div class="info info-body">- <b>2nd grade</b> Continued intro to Scratch</div>
+                <div class="info info-body">- <b>2nd grade</b> Created a small booklet outlining our first game</div>
+            </div>
+            <div id="tips" class="section">
+                <div id="header">Tips & Tricks</div>
+            </div>
+        </div>
+        <div id="body-right">
+            <div id="reminders" class="section">
+                <div id="header">Reminders</div>
+                <div class="info info-body">- All notes can be found on Teams</div>
+                <div class="info info-body">- All assignments can be found on Teams</div>
+                <div class="info info-body">- <b>2nd - 4th Grade</b> Laptops are provided. </div>
+                <div class="info info-body">- <b>5th Grade</b> It is mandatory for you to have a working Laptop and charger</div>
+            </div>
+            <div id="upcoming" class="section">
+                <div id="header">What's Next</div>
+                <div class="info info-body">- Wrap up Math Basics document</div>
+                <div class="info info-body">- Intro to Scratch</div>
+                <div class="info info-body">- <b>2nd grade</b> Continue intro to Scratch</div>
+                <div class="info info-body">- <b>2nd grade</b> Continue building our first game</div>
+            </div>
+        </div>
+    </Body>
+</html>
